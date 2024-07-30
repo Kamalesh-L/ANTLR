@@ -1,0 +1,21 @@
+package token3;
+
+import org.antlr.v4.runtime.ANTLRFileStream;
+import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.Token;
+
+public class mymain {
+
+    public static void main(String[] args) {
+        try {
+            CharStream input = new ANTLRFileStream("/Users/kamaleshl/eclipse-workspace/token3/src/input");
+            Hello lexer = new Hello(input);
+            Token token;
+            while ((token = lexer.nextToken()).getType() != -1) {
+                System.out.println(token.getText());
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
