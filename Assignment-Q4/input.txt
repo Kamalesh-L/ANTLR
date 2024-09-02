@@ -1,0 +1,4 @@
+f(x,y) {
+   a = not 3 or foo;
+   x and y;
+}
